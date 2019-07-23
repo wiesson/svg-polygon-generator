@@ -1,5 +1,4 @@
 import * as React from "react";
-import { number } from "prop-types";
 
 type Triangle = {
   p1: number[];

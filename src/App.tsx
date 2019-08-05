@@ -10,12 +10,17 @@ function App() {
   const [values, setValues] = useState({
     "1": { title: "Adventure", percentage: 50, key: "1", points: undefined },
     "2": {
-      title: "Sustainability",
+      title: "Community",
       percentage: 49,
       key: "2",
-      points: undefined
+      points: undefined,
     },
-    "3": { title: "Community", percentage: 12.5, key: "3", points: undefined },
+    "3": {
+      title: "Sustainability",
+      percentage: 12.5,
+      key: "3",
+      points: undefined,
+    },
     "4": { title: "Tradition", percentage: 25, key: "4", points: undefined },
     "5": { title: "Order", percentage: 37.5, key: "5", points: undefined },
     "6": { title: "Influence", percentage: 50, key: "6", points: undefined },
@@ -23,11 +28,11 @@ function App() {
       title: "Performance",
       percentage: 62.5,
       key: "7",
-      points: undefined
+      points: undefined,
     },
     "8": { title: "Freedom", percentage: 75, key: "8", points: undefined },
     "9": { title: "Also Good", percentage: 87.5, key: "9", points: undefined },
-    "10": { title: "Power", percentage: 100, key: "10", points: undefined }
+    "10": { title: "Power", percentage: 100, key: "10", points: undefined },
   });
 
   const [selectedValue, setSelectedValue] = useState(values["1"].key);
@@ -96,8 +101,8 @@ function App() {
               ...values,
               [v.key]: {
                 ...v,
-                percentage: parseInt(ev.currentTarget.value, 10)
-              }
+                percentage: parseInt(ev.currentTarget.value, 10),
+              },
             })
           }
         />

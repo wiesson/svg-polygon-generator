@@ -33,18 +33,18 @@ function pointsFn(elements: any[], angle: number, radius: number) {
   }));
 }
 
+function toCartesian({ r, phi }: Point) {
+  return [r * Math.cos(phi), r * Math.sin(phi)];
+}
+
 function polygonFn(points: Point[] = []): string {
   return points.map(toCartesian).join(" ");
 }
 
 function getPoints(points: Triangle): string {
   return Object.values(points)
-    .map(p => p.join(" "))
+    .map((p) => p.join(" "))
     .toString();
-}
-
-function toCartesian({ r, phi }: Point) {
-  return [r * Math.cos(phi), r * Math.sin(phi)];
 }
 
 type Props = {
@@ -133,7 +133,7 @@ function Polygon({ values, offset = 0, textRadius = 65, size = 300 }: Props) {
             <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
           </filter>
 
-          {triangles.map(t => {
+          {triangles.map((t) => {
             const { percentage } = t;
             const value = getFactor(percentage);
 
@@ -184,7 +184,7 @@ function Polygon({ values, offset = 0, textRadius = 65, size = 300 }: Props) {
             );
           })}
 
-          {triangles.map(t => {
+          {triangles.map((t) => {
             const [x, y] = t.textPoint;
 
             return (

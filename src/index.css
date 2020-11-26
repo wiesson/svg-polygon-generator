@@ -20,5 +20,5 @@ body {
 }
 
 svg {
-  filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 0.5rem 0.5rem rgba(0, 0, 0, 0.5));
 }
